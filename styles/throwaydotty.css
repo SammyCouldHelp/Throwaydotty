@@ -5,7 +5,526 @@
   box-sizing: border-box;
 }
 
-body {
+body {/* General Styles */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+  }
+  
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Header Styles */
+  .top-bar {
+    background-color: #264653;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 0.9em;
+    color: #e9c46a;
+  }
+  
+  .top-bar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .top-bar .social-icons a {
+    margin-left: 15px;
+    color: #e9c46a;
+  }
+  
+  header {
+    background-color: #2a9d8f;
+    color: white;
+    padding: 10px 0;
+  }
+  
+  header .logo img {
+    height: 80px;
+    padding-top: 10px;
+  }
+  
+  header nav ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  header nav ul li {
+    margin-left: 20px;
+  }
+  
+  header nav ul li a {
+    color: white;
+    font-weight: bold;
+  }
+  
+  header .btn {
+    background-color: #e76f51;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  /* Hero Section Styles */
+  .hero {
+    background-color: #2a9d8f;
+    background-image: none !important;
+    color: whitesmoke;
+    text-align: center;
+    padding: 100px 0;
+    position: relative;
+}
+
+  
+  .hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+  }
+  
+  .hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+  }
+  
+   .btn {
+    background-color: #e76f51;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2em;
+  }
+  
+  .btn :hover {
+    background-color: #555;
+    color: white;
+  }
+  /* About Section Styles */
+  .about-us {
+    background-color: #ffffff;
+    padding: 50px 0;
+    color: #264653;
+    text-align: center;
+    font-size: 40px;  
+  }
+  .about {
+    background-color: #ffffff;
+    padding: 50px 0;
+    color: #264653;
+    text-align: left;
+  }
+  
+  .about .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    justify-content: flex-start;
+    border: 20px;
+  }
+  
+  .about-text {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .about-text h2 {
+    color: #264653;
+    margin-bottom: 20px;
+  }
+  
+  .about-text p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+  
+  .about-text strong {
+    color: #2a9d8f;
+  }
+  
+  .owner {
+    display: flex;
+    align-items: center;
+  }
+  
+  .owner img {
+    border-radius: 50%;
+    margin-right: 15px;
+    width: 50px;
+    height: 50px;
+  }
+  
+  .owner h4 {
+    margin-bottom: 5px;
+  }
+  
+  .owner p {
+    color: #e76f51;
+  }
+  
+  .about-images {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+  }
+  
+  .about-images img {
+    max-width: 100%;
+    margin-bottom: 20px;
+    border-radius: 5px;
+  }
+  
+  /* Services Section Styles */
+  .services-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f8f8f8;
+  }
+  
+  .service {
+    background-color: white;
+    border: 1px solid #ddd;
+    margin: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    flex: 1 1 calc(33.333% - 20px);
+    max-width: calc(33.333% - 20px);
+  }
+  
+  .service img {
+    width: 100%;
+    height: 300px;
+  }
+  
+  .service-description {
+    padding: 15px;
+  }
+  
+  .service-description h3 {
+    margin-bottom: 10px;
+    color: #264653;
+  }
+  
+  .service-description p {
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      width: 90%;
+      flex-direction: column;
+    }
+  
+    header nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    header nav ul li {
+      margin: 10px 0;
+    }
+  
+    .top-bar .container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .about .container {
+      flex-direction: column;
+    }
+  
+    .about-text {
+      margin-bottom: 20px;
+    }
+  
+    .about-images {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+  
+    .service {
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
+  }
+  /* Benefits Section Styles */
+  .benefits-section {
+    padding: 50px 0;
+    background-color: #ffffff;
+    color: #264653;
+    text-align: center;
+  }
+  
+  .benefits-section .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .benefit {
+    background-color: white;
+    border: 1px solid #ddd;
+    margin: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    flex: 1 1 calc(33.333% - 20px);
+    max-width: calc(33.333% - 20px);
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .benefit .icon {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #2a9d8f;
+  }
+  
+  .benefit h3 {
+    margin-bottom: 10px;
+    color: #264653;
+  }
+  
+  .benefit p {
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  @media (max-width: 768px) {
+    .benefit {
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
+  }
+  /* Pickup Section Styles */
+  .pickup-section {
+    padding: 50px 0;
+    background-color: #2a9d8f;
+    color: white;
+    text-align: center;
+  }
+  
+  .pickup-section .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .pickup-section h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+  }
+  
+  .pickup-section p {
+    margin-bottom: 30px;
+    line-height: 1.6;
+  }
+  
+  .pickup-section .btn {
+    background-color: #e76f51;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    text-decoration: none;
+  }
+  
+  .pickup-section .btn:hover {
+    background-color: #d65a40;
+  }
+  /* Footer Styles */
+  .site-footer {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 50px 0;
+  }
+  
+  .site-footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  
+  .footer-logo img {
+    max-width: 150px;
+    height: 80px;
+    padding-top: 10px;
+  }
+  
+  .footer-column {
+    flex: 1;
+    margin: 10px;
+    text-align: left;
+  }
+  
+  .footer-column h3 {
+    margin-bottom: 15px;
+    color: #e76f51;
+  }
+  
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-column ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-column p {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .footer-column p img {
+    margin-right: 10px;
+  }
+  
+  .social-icons {
+    margin-top: 10px;
+  }
+  
+  .social-icons a {
+    margin-right: 10px;
+  }
+  
+  .social-icons img {
+    width: 24px;
+  }
+  
+  .subscribe-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .subscribe-form .form-group {
+    margin-bottom: 10px;
+  }
+  
+  .subscribe-form input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .subscribe-form button {
+    background-color: #e76f51;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  
+  .subscribe-form button:hover {
+    background-color: #d65a40;
+  }
+  .service-heading {
+    background-color: #ffffff;
+    padding: 50px 0;
+    color: #264653;
+    text-align: center; 
+    font-size: 40px; 
+  }
+  .reach-out {
+    background-color: #ffffff;
+    padding: 50px 0;
+    color: #264653;
+    text-align: center; 
+    font-size: 40px; 
+  }
+  /* Contact Form Section */
+  .contact {
+    padding: 2rem;
+    
+  }
+  
+  .form-container {
+    background: #2a9d8f;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    margin: auto;
+    max-width: 600px;
+    color: #fff;
+  }
+  
+  .vertical-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .vertical-form h2 {
+    margin-bottom: 1rem;
+    color: #e9c46a;
+  }
+  
+  .vertical-form label {
+    font-weight: bold;
+    color: #e9c46a;
+  }
+  
+  .vertical-form input,
+  .vertical-form textarea {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.25rem;
+    outline: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 1rem;
+  }
+  
+  .vertical-form button {
+    padding: 0.75rem;
+    border: none;
+    border-radius: 0.25rem;
+    background: #e76f51;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .vertical-form button:hover {
+    background: #f4a261;
+  }
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
 }
@@ -522,4 +1041,70 @@ header .btn {
 
 .vertical-form button:hover {
   background: #f4a261;
+}
+
+/* Top Bar - Nigeria flag and text */
+.nigeria-right {
+  display: flex;
+  align-items: center;
+  color: #e9c46a;
+}
+.nigeria-flag {
+  width: 20px;
+  margin-left: 5px;
+}
+
+/* Carousel Styles */
+.carousel {
+  width: 100%;
+  height: 435px;
+  overflow: hidden;
+  position: relative;
+}
+.carousel-container {
+  display: flex;
+  animation: slide 50s infinite;
+}
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  
+}
+
+@keyframes slide {
+  0% {transform: translateX(0%);}
+  20% {transform: translateX(-100%);}
+  40% {transform: translateX(-200%);}
+  60% {transform: translateX(-300%);}
+  80% {transform: translateX(-400%);}
+  100% {transform: translateX(0%);}
+}
+
+/* Responsive height for smaller screens */
+@media (max-width: 768px) {
+  .carousel {
+    height: 400px;  /* Smaller height for mobile */
+  }
+
+  .carousel-image {
+    object-fit: cover;  /* For mobile, ensure images scale better */
+  }
+}
+
+
+/* Waste Report Section */
+.report-waste {
+  padding: 20px;
+  background-color: #e9f5f3;
+  text-align: center;
+}
+.report-waste form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.report-waste input, .report-waste button {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
 }
