@@ -41,8 +41,8 @@ document.addEventListener("DOMContentLoaded", function () {
 function toggleMenu() {
   const menu = document.querySelector (".menu-links");
   const icon = document.querySelector (".hamburger-icon");
-  menu.classList.toggle ("open")
-  icon.classList.toggle ("open")
+  menu.classList.toggle ("open");
+  icon.classList.toggle ("open");
 }
 
 
@@ -64,28 +64,19 @@ function toggleMenu() {
 
 
     // Import AOS
+// Ensure AOS is loaded properly
 const script = document.createElement('script');
 script.src = "https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js";
 script.onload = function () {
     // Initialize AOS after the script is loaded
-    AOS.init({
-        duration: 1000, // Animation duration (1 second)
-        once: true,     // Ensures animations happen only once as you scroll
-    });
+    if (typeof AOS !== "undefined") {
+        AOS.init({
+            duration: 1000, // Animation duration (1 second)
+            once: true,     // Ensures animations happen only once as you scroll
+        });
+    }
 };
 document.head.appendChild(script);
-
-document.addEventListener("DOMContentLoaded", function() {
-  // Your existing JavaScript code...
-
-  // Initialize AOS after the DOM is fully loaded
-  AOS.init({
-      duration: 1000, // Adjust the animation duration in milliseconds
-      once: true,     // Animation will happen only once when scrolled
-  });
-
-  // Rest of your existing JS code
-});
 
 // Ensure overflow-x remains hidden on window resize and load
 window.addEventListener("resize", () => {

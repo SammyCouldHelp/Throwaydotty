@@ -11,14 +11,14 @@ html, body {/* General Styles */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow-x: hidden !important;
   }
   
   body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
+    overflow-x: hidden;
   }
-  
+
   .container {
     width: 80%;
     margin: 0 auto;
@@ -34,7 +34,6 @@ html, body {/* General Styles */
 
   html {
     scroll-behavior: smooth;
-    overflow-x: hidden;
   }
   
   /* Header Styles */
@@ -1060,76 +1059,6 @@ header .btn {
   margin-left: 5px;
 }
 
-/* Carousel Styles */
-.carousel {
-  width: 100%;
-  height: 300px; /* Reduced height for better display */
-  overflow: hidden;
-  position: relative;
-  z-index: 1;
-  display: flex;
-  align-items: center; /* Center images vertically */
-}
-
-.carousel-container {
-  display: flex;
-  animation: slide 150s linear infinite; /* Smooth continuous sliding */
-}
-
-.carousel-image {
-  width: auto; /* Maintain aspect ratio */
-  height: 100%; /* Ensure image fills the height of the carousel */
-  object-fit: cover; /* Cover the area without distortion */
-  object-position: center; /* Center image within its frame */
-}
-
-/* Animation Keyframes */
-@keyframes slide {
-  0% { transform: translateX(0%); }
-  20% { transform: translateX(-100%); }
-  40% { transform: translateX(-200%); }
-  60% { transform: translateX(-300%); }
-  80% { transform: translateX(-400%); }
-  100% { transform: translateX(0%); }
-}
-
-/* Responsive height for smaller screens */
-@media (max-width: 768px) {
-  .carousel {
-    height: 250px; /* Reduced height for mobile */
-  }
-
-  .carousel-image {
-    object-fit: contain; /* Make sure the entire image is visible */
-  }
-}
-
-/* Tablet and Desktop Adjustments */
-@media (min-width: 769px) {
-  .carousel {
-    height: 300px; /* Consistent height for larger screens */
-  }
-
-  .carousel-image {
-    object-fit: contain; /* Maintain full image visibility */
-    object-position: center; /* Center the image */
-  }
-}
-
-
-/* Tablet and Desktop Adjustments */
-@media (min-width: 769px) {
-  .carousel {
-    height: 435px; /* Maintain original height for larger screens */
-  }
-
-  .carousel-image {
-    object-fit: contain; /* Maintain aspect ratio without cutting */
-    object-position: center; /* Center the image */
-  }
-}
-
-
 /* Waste Report Section */
 .report-waste {
   padding: 20px;
@@ -1197,12 +1126,13 @@ a:hover {
 
 #hamburger-nav {
   display: none;
-  z-index: 1000;
+  z-index: 1000 !important;
   position: relative;
 }
  .hamburger-menu {
   position: relative;
   display: inline-block;
+  z-index: 1000 !important;
  }
 
  .hamburger-icon {
@@ -1212,6 +1142,8 @@ a:hover {
   height: 24px;
   width: 30px;
   cursor: pointer;
+  z-index: 1000 !important;
+  position: relative;
  }
 
  .hamburger-icon span {
@@ -1229,7 +1161,8 @@ transition: all 0.3s ease-in-out;
   width: fit-content;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  z-index: 1000;
 }
 
 .menu-links a {
@@ -1239,7 +1172,8 @@ transition: all 0.3s ease-in-out;
   font-size: 1.5rem;
   color: black;
   text-decoration: none;
-  transition: max-height 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  z-index: 1000;
 }
 
 .menu-links {
@@ -1247,9 +1181,11 @@ transition: all 0.3s ease-in-out;
 }
 
 .menu-links.open {
-  /* min-height: 300px !important; */
-  max-height: 500px !important; 
-  overflow: visible !important;
+  display: block !important; /* Show when open */
+  height: auto; /* Allow auto height to avoid clipping */
+  max-height: 500px; 
+  z-index: 1000; /* Ensure it is above other content */
+  width
 }
 
 .hamburger-icon.open span:first-child {
@@ -1279,7 +1215,8 @@ transform: rotate(45deg) translate(10px, 5px);
         display: none;
       }
       #hamburger-nav {
-        display: flex;
+        display: flex !important;
+        z-index: 1000 !important;
       }
     }
 
@@ -1290,6 +1227,7 @@ transform: rotate(45deg) translate(10px, 5px);
   justify-content: center;
   align-items: center;
   padding: 25px;
+  z-index: 1;
   background-color: #2a9d8f; /* Match header and hero background */
 }
 
