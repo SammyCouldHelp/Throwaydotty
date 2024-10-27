@@ -3,13 +3,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  max-width: 100%;
 }
 
-body {/* General Styles */
+html, body {/* General Styles */
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-x: hidden !important;
   }
   
   body {
@@ -32,6 +34,7 @@ body {/* General Styles */
 
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
   
   /* Header Styles */
@@ -1293,7 +1296,7 @@ transform: rotate(45deg) translate(10px, 5px);
 /* Slider Container */
 .slider {
   --slide-width: clamp(320px, 75vw, 800px);
-  --slide-height: clamp(240px, 75vh, 600px);
+  --slide-height: clamp(240px, 52vh, 600px);
 
   display: grid;
   grid-auto-flow: column;
@@ -1350,3 +1353,11 @@ transform: rotate(45deg) translate(10px, 5px);
 .dots a:hover {
   opacity: 1;
 }
+
+/* Slideshow: Reduce height on smaller screens */
+@media (max-width: 768px) {
+  .slider {
+      --slide-height: 290px; /* Set a smaller height for mobile */
+  }
+}
+

@@ -87,4 +87,13 @@ document.addEventListener("DOMContentLoaded", function() {
   // Rest of your existing JS code
 });
 
+// Ensure overflow-x remains hidden on window resize and load
+window.addEventListener("resize", () => {
+  document.documentElement.style.overflowX = "hidden";
+});
+
+window.addEventListener("load", () => {
+  document.documentElement.style.overflowX = "hidden";
+});
+
 
