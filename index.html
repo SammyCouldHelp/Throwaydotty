@@ -8,10 +8,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"  crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="/styles/throwaydotty.css">
+
+    <!-- AOS CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
 </head>
 <body>
     <header>
-        <div class="top-bar">
+        <div class="top-bar" data-aos="slide-right">
             <div class="container">
                 <p>Commercial Waste Services in your Area. Dial (+234) 8119951308</p>
                 <p>Mon - Sat: 7am to 7pm Sunday is CLOSED</p>
@@ -92,6 +96,27 @@
     </div>
 </section> -->
 
+<!-- Slider Section -->
+<div class="slider-wrapper"  data-aos="zoom-in">
+    <div class="slider">
+        <div id="slide-1" class="slide" style="background-image: url(/assets/img1.jpg);"></div>
+        <div id="slide-2" class="slide" style="background-image: url(/assets/img2.jpg);"></div>
+        <div id="slide-3" class="slide" style="background-image: url(/assets/img3.jpg);"></div>
+        <div id="slide-4" class="slide" style="background-image: url(/assets/img4.jpg);"></div>
+        <div id="slide-5" class="slide" style="background-image: url(/assets/img5.jpg);"></div>
+    </div>
+
+    <div class="dots">
+        <a href="#slide-1"></a>
+        <a href="#slide-2"></a>
+        <a href="#slide-3"></a>
+        <a href="#slide-4"></a>
+        <a href="#slide-5"></a>
+    </div>
+</div>
+
+
+
     <section id="home" class="hero">
         <div class="container">
             <h1>We Provide Safe And Reliable Waste Collection!</h1>
@@ -100,7 +125,7 @@
         </div>
     </section>
 
-    <section id="about" class="about">
+    <section id="about" class="about" data-aos="slide-left">
         <h2 class="about-us">About Us</h2>
         <div class="container">
             <div class="about-text">
@@ -131,7 +156,7 @@
     <h2 class="service-heading">Fast And Professional Services We Offer</h2>
 
     <section id="services" class="services-section">  
-        <div class="service">
+        <div class="service" data-aos="slide-right">
             <img src="https://i.ibb.co/Vm5LtBP/garbage-can-231875-1280.jpg" alt="garbage-can">
             <div class="service-description">
                 <h3>Residential Waste Collection</h3>
@@ -142,7 +167,7 @@
                     making it easy for you to contribute to a greener community.</p>
             </div>
         </div>
-        <div class="service">
+        <div class="service" data-aos="slide-left">
             <img src="https://i.ibb.co/HzZfJp9/garbage-2497064-1280.jpg" alt="garbage">
             <div class="service-description">
                 <h3>Commercial Waste Collection</h3>
@@ -153,7 +178,7 @@
                     helping you maintain a clean and productive environment.</p>
             </div>
         </div>
-        <div class="service">
+        <div class="service" data-aos="slide-right">
             <img src="https://i.ibb.co/5R3c8Dd/garbage-can-8191-1280.jpg" alt="garbage-can">
             <div class="service-description">
                 <h3>Industrial Waste Collection</h3>
@@ -167,7 +192,7 @@
     </section>
 
  <!-- Waste Heap Report Section -->
- <section class="report-waste">
+ <section class="report-waste" data-aos="slide-down">
     <h2>Report Waste Heap in Your Area</h2>
     <p>If you notice a large waste heap in your area, please report it here:</p>
     <form id="wasteReportForm">
@@ -182,7 +207,7 @@
 </section>
 
     <!-- Contact Form Section -->
-    <section id="contact" class="contact">
+    <section id="contact" class="contact" data-aos="slide-up">
         <h2 class="reach-out"> Lets Start A Conversation</h2>
         <div class="form-container">
             <form class="vertical-form" action="https://submit-form.com/3cMe44hPR">
@@ -200,7 +225,7 @@
         </div>
     </section>
     <section class="benefits-section">
-      <div class="container">
+      <div class="container" data-aos="slide-right">
           <div class="benefit">
               <div class="icon">
                   <i class="fas fa-moon"></i>
@@ -208,14 +233,14 @@
               <h3>No More Late Night Disposals</h3>
               <p>Students no longer need to come out late at night to dispose of their garbage. Throwaydotty has got you covered.</p>
           </div>
-          <div class="benefit">
+          <div class="benefit" data-aos="slide-left">
               <div class="icon">
                   <i class="fas fa-shield-alt"></i>
               </div>
               <h3>Avoid Issues with Waste Taskforce</h3>
               <p>Our customers will no longer have issues with the waste management taskforce of Rivers State over disposing dirt at the wrong time. We have you covered.</p>
           </div>
-          <div class="benefit">
+          <div class="benefit" data-aos="slide-right">
               <div class="icon">
                   <i class="fas fa-walking"></i>
               </div>
@@ -225,7 +250,7 @@
       </div>
   </section>
  
-  <section class="pickup-section">
+  <section class="pickup-section" data-aos="slide-right">
     <div class="container">
         <h2>Convenient and Safe Waste Disposal</h2>
         <p>Experience the ultimate convenience with Throwaydotty's no-contact payment options, 
@@ -233,12 +258,12 @@
         <a href="#" class="btn">Request for a Pickup</a>
     </div>
 </section>
-<footer class="site-footer">
+<footer class="site-footer" data-aos="slide-up">
   <div class="container">
       <div class="footer-logo">
           <img src="/assets/DOTTY white.png" alt="Throwaydotty Logo">
       </div>
-      <div class="footer-column">
+      <div class="footer-column" data-aos="slide-right">
           <h3>Get in Touch</h3>
           <p><img src="https://img.icons8.com/fluent/16/000000/phone.png" alt="Phone Icon"> +234-8119951308</p>
           <p><img src="https://img.icons8.com/fluent/16/000000/email.png" alt="Email Icon"> throwaydotty@gmail.com</p>
@@ -248,7 +273,7 @@
             <a href="https://www.instagram.com/accounts/login/"><i class="fab fa-instagram"></i></a>
         </div>
       </div>
-      <div class="footer-column">
+      <div class="footer-column" data-aos="slide-right">
           <h3>Other Services</h3>
           <ul>
               <li>Clinical Garbage Disposal</li>
@@ -259,7 +284,7 @@
               <li>Zero Waste Service</li>
           </ul>
       </div>
-      <div class="footer-column">
+      <div class="footer-column" data-aos="slide-right">
         <h3>Subscribe To Our Newsletter</h3>
         <form id="subscribe-form" class="subscribe-form">
             <div class="form-group">

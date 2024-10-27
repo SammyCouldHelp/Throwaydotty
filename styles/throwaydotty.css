@@ -1279,3 +1279,74 @@ transform: rotate(45deg) translate(10px, 5px);
         display: flex;
       }
     }
+
+    /* Slider Wrapper */
+.slider-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  background-color: #2a9d8f; /* Match header and hero background */
+}
+
+/* Slider Container */
+.slider {
+  --slide-width: clamp(320px, 75vw, 800px);
+  --slide-height: clamp(240px, 75vh, 600px);
+
+  display: grid;
+  grid-auto-flow: column;
+  scroll-snap-type: x mandatory;
+  max-width: var(--slide-width);
+  border: 5px solid #fff;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2), 0 2px 20px rgba(0, 0, 0, 0.25);
+  overflow-y: hidden;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none; /* Hide scrollbar in IE and Edge */
+  scrollbar-width: none; /* Hide scrollbar in Firefox */
+}
+
+/* Hide scrollbar in Webkit browsers */
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
+/* Each Slide */
+.slide {
+  scroll-snap-align: start;
+  width: var(--slide-width);
+  height: var(--slide-height);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Adjust Dots to Be Inside the Slider */
+.dots {
+  position: absolute;
+  bottom: 10px; /* Adjust spacing to fit inside the container */
+  left: 50%;
+  transform: translateX(-50%);
+  gap: 15px;
+  z-index: 2; /* Ensure dots appear above the slides */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Additional Styling for Dots */
+.dots a {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.75;
+  transition: opacity ease 250ms;
+  cursor: pointer;
+}
+
+.dots a:hover {
+  opacity: 1;
+}
