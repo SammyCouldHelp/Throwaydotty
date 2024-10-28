@@ -113,9 +113,9 @@ html, body {/* General Styles */
    .btn {
     background-color: #e76f51;
     color: white;
-    padding: 10px 20px;
     border-radius: 5px;
-    font-size: 1.2em;
+    font-size: clamp(18px, 2vw, 1.2rem);
+    text-wrap: nowrap;
   }
   
   .btn :hover {
@@ -1128,11 +1128,13 @@ a:hover {
   display: none;
   z-index: 1000 !important;
   position: relative;
+  
 }
  .hamburger-menu {
   position: relative;
   display: inline-block;
   z-index: 1000 !important;
+  width: 100%;
  }
 
  .hamburger-icon {
@@ -1216,18 +1218,35 @@ transform: rotate(45deg) translate(10px, 5px);
       }
       #hamburger-nav {
         display: flex !important;
-        z-index: 1000 !important;
+        padding:0 20px;
+      }
+      .hamburger-icon{
+        position:absolute;
+        right:50%;
+        
+      }
+
+      .menu-links{
+        position: absolute;
+        top:50px;
+        
+        left: 30%;
+        width: fit-content;
+      }
+
+      .logo{
+        width:150px;
+        /* margin: 30px; */
       }
     }
 
-    /* Slider Wrapper */
+ /* Slider Wrapper */
 .slider-wrapper {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 25px;
-  z-index: 1;
   background-color: #2a9d8f; /* Match header and hero background */
 }
 
