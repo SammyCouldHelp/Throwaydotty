@@ -7,7 +7,6 @@ body {
     overflow: hidden;
 }
 
-
 .signup .container {
     display: flex;
 }
@@ -50,7 +49,6 @@ body {
 .signup .container .left .plans .details i {
     color: #83bf6e;
 }
-
 
 /* Right Section */
 .signup .container .right {
@@ -184,15 +182,6 @@ body {
     outline: none;
 }
 
-/* Make sure you start by correcting this for tomorrow */
-/* .signup .container .right .signup-2 form .email-input .email input:focus {
-    background-color: transparent;
-}
-
-.signup .container .right .signup-2 form .email-input:focus-within {
-    border: 1px solid #aebbcd;
-} */
-
 .signup .container .right .signup-2 form .email-input:hover {
     background-color: #d3ddea;
 }
@@ -217,23 +206,21 @@ body {
     font-size: 13px;
 }
 
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+    .signup .container {
+        flex-direction: column;
+    }
 
+    .signup .container .left {
+        display: none;
+    }
 
+    .signup .container .right {
+        width: 100%;
+    }
 
-
-.red {
-    border: 2px solid red;
-}
-
-.green {
-    border: 2px solid green;
-}
-
-.black {
-    border: 1px solid black;
-}
-
-
-.yellow {
-    border: 2px solid yellow;
+    .signup .container .right .signup-2 form {
+        width: 85%;
+    }
 }
