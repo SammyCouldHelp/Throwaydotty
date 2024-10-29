@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Waste Management Dashboard</title>
+  <link rel="stylesheet" href="/styles/dashboard2.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>Dashboard</h2>
+      <ul>
+        <li><a href="#" class="active">Overview</a></li>
+        <li><a href="#">Account Information</a></li>
+        <li><a href="#">Service Schedule</a></li>
+        <li><a href="#">Waste Collection History</a></li>
+        <li><a href="#">Service Requests</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
+      <!-- Dashboard Overview -->
+      <section class="overview">
+        <h1>Dashboard Overview</h1>
+        <div class="overview-cards">
+          <div class="card">
+            <h3>Total Pickups</h3>
+            <p>15</p>
+          </div>
+          <div class="card">
+            <h3>Service Status</h3>
+            <p><span class="status active">Active</span></p>
+          </div>
+          <div class="card">
+            <h3>Payment Due</h3>
+            <p class="alert">Unpaid</p>
+          </div>
+          <div class="card">
+            <h3>Next Pickup</h3>
+            <p>Tomorrow, 9:00 AM</p>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Service Schedule Calendar -->
+      <section class="service-schedule">
+        <h2>Service Schedule</h2>
+        <div id="calendar"></div>
+      </section>
+    </main>
+  </div>
+  <script src="/scripts/dashboard2.js"></script>
+</body>
+</html>
